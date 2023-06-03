@@ -1,0 +1,135 @@
+from turtle import *
+import turtle
+import sys
+from time import sleep
+from turtle import Screen, Turtle
+print('NOT MORE THEN 24 WORDS')
+print('NEXT PRESS ENTER TO START PROGRESS')
+blockedWords = {'kurwa', 'debil', 'zjeb','huj', 'skurwiel','pojeb', 'ujeb'}
+userName = input('ENTER KID NAME: ')
+while userName in blockedWords:
+    userName = input("YOUR NAME IS ON BLACK LIST. TRY AGAIN: ")
+color = (0.60160, 0, 0.99220)
+target = (0.86330, 0.47660, 0.31255)
+turtle.title("$pi")
+tur = Screen()
+tur.tracer(False)
+
+width, height = tur.window_width(), tur.window_height()
+
+deltas = [(hue - color[index]) / height for index, hue in enumerate(target)]
+
+turt = Turtle()
+turt.color(color)
+
+turt.penup()
+turt.goto(-width/2, height/2)
+turt.pendown()
+
+direct = 1
+
+for distance, y in enumerate(range(height//2, -height//2, -1)):
+
+    turt.forward(width * direct)
+    turt.color([color[i] + delta * distance for i, delta in enumerate(deltas)])
+    turt.sety(y)
+
+    direct *= -1
+    
+tur.tracer(True)
+t = turtle.Turtle()
+t.speed(10)
+t.ht()
+t.penup()
+t.goto(-20, -250)
+t.pencolor("white")
+t.pensize(23)
+t.pendown()
+r = 150
+t.circle(r)
+t.penup()
+t.goto(160, 130)
+t.pendown()
+kacper = 50
+t.circle(kacper)
+t.goto(140, -250)
+t.forward(-100)
+t.penup()
+t.forward(-240)
+t.pendown()
+t.forward(100)
+t.penup()
+t.forward(-100)
+t.pendown()
+t.goto(-120, 130)
+t.circle(kacper)
+t.goto(-90, 52)
+t.penup()
+t.goto(160, 130)
+t.pendown()
+t.goto(90, 0)
+t.penup()
+t.goto(-20, -200)
+t.pendown()
+ui = 10
+oko = 5
+oki = 0.6
+t.circle(ui)
+t.penup()
+t.goto(-70, -90)
+t.pendown()
+t.circle(oko)
+t.penup()
+t.goto(50, -90)
+t.pendown()
+t.circle(oko)
+t.pencolor("black")
+t.circle(oki)
+t.penup()
+t.goto(-70, -90)
+t.pendown()
+t.circle(oki)
+t.penup()
+t.goto(-110, -320)
+t.pendown()
+t.pencolor("black")
+t.write("TELEFON", font=("Verdana",
+                                    30, "normal"))
+t.penup()
+t.goto(-150, 262)
+t.pendown()
+t.pencolor("green")
+t.write(userName, font=("Verdana",
+                                    27, "normal"))
+t.pencolor("black")
+t.penup()
+t.goto(-110, -320)
+t.pendown()
+while True:
+    sleep(0.1)
+
+    t.pencolor("blue")
+    t.write("TELEFON", font=("Verdana",
+                                        30, "normal"))
+    sleep(0.1)
+
+    t.pencolor("red")
+    t.write("TELEFON", font=("Verdana",
+                                        30, "normal"))
+    sleep(0.1)
+
+    t.pencolor("green")
+    t.write("TELEFON", font=("Verdana",
+                                        30, "normal"))
+    sleep(0.1)
+
+    t.pencolor("yellow")
+    t.write("TELEFON", font=("Verdana",
+                                        30, "normal"))
+    sleep(0.1)
+
+    t.pencolor("orange")
+    t.write("TELEFON", font=("Verdana",
+                                        30, "normal"))
+    sleep(0.1)
+
